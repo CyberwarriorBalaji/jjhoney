@@ -1,0 +1,488 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JJ Natural Honey - 100% Pure & Organic</title>
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+  
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            honey: {
+              50: '#fffbeb',
+              100: '#fef3c7',
+              200: '#fde68a',
+              300: '#fcd34d',
+              400: '#fbbf24',
+              500: '#f59e0b',
+              600: '#d97706',
+              700: '#b45309',
+              800: '#92400e',
+              900: '#78350f',
+            },
+            warmorange: '#e66000',
+            deeporange: '#cc4e00',
+          },
+          fontFamily: {
+            sans: ['Outfit', 'sans-serif'],
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    /* Honeycomb pattern overlay */
+    .bg-honeycomb {
+      background-color: #e66000;
+      background-image: radial-gradient(#fbbf24 10%, transparent 11%), radial-gradient(#fbbf24 10%, transparent 11%);
+      background-size: 30px 30px;
+      background-position: 0 0, 15px 15px;
+      background-opacity: 0.15;
+    }
+    
+    .honey-gradient {
+      background: linear-gradient(135deg, #f59e0b 0%, #e66000 100%);
+    }
+
+    .honey-glass {
+      background: rgba(255, 255, 255, 0.92);
+      backdrop-filter: blur(12px);
+    }
+
+    @keyframes float {
+      0%, 100% { transform: translateY(0px) rotate(0deg); }
+      50% { transform: translateY(-10px) rotate(2deg); }
+    }
+
+    .animate-float {
+      animation: float 4s ease-in-out infinite;
+    }
+  </style>
+</head>
+<body class="bg-amber-50/40 text-gray-800 font-sans antialiased">
+
+  <!-- TOP BAR / HEADER -->
+  <header class="sticky top-0 z-40 bg-white/95 backdrop-blur-md border-b border-amber-200/60 shadow-sm">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+      
+      <!-- Logo -->
+      <a href="#" class="flex items-center gap-3 group">
+        <div class="w-12 h-12 rounded-2xl bg-gradient-to-tr from-warmorange to-honey-400 flex items-center justify-center text-white shadow-md shadow-amber-500/20 group-hover:scale-105 transition-transform">
+          <i class="fa-solid font-bold text-2xl">JJ</i>
+        </div>
+        <div>
+          <span class="block text-xl font-extrabold tracking-tight text-gray-900 leading-none">JJ NATURAL</span>
+          <span class="text-xs font-bold tracking-widest text-warmorange uppercase">HONEY</span>
+        </div>
+      </a>
+
+      <!-- Quick Action Buttons -->
+      <div class="flex items-center gap-3">
+        <!-- Direct Phone Call Button -->
+        <a href="tel:8883382313" class="hidden sm:inline-flex items-center gap-2 px-4 py-2.5 rounded-full bg-amber-100 text-warmorange font-semibold text-sm hover:bg-amber-200 transition-colors">
+          <i class="fa-solid fa-phone text-warmorange"></i>
+          <span>8883382313</span>
+        </a>
+        
+        <!-- Order Call to Action -->
+        <button onclick="openOrderModal()" class="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-gradient-to-r from-warmorange to-honey-600 text-white font-bold text-sm shadow-lg shadow-warmorange/30 hover:shadow-xl hover:scale-105 active:scale-95 transition-all">
+          <i class="fa-solid fa-shopping-bag"></i>
+          <span>Order Now</span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- HERO SECTION -->
+  <section class="relative overflow-hidden bg-gradient-to-br from-warmorange via-honey-600 to-amber-700 text-white py-12 lg:py-24">
+    <!-- SVG Hexagon Background Pattern -->
+    <div class="absolute inset-0 opacity-10 pointer-events-none">
+      <svg width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <pattern id="hexagons" width="50" height="43.3" patternUnits="userSpaceOnUse" patternTransform="scale(2)">
+            <path d="M25 0 L50 14.4 L50 43.3 L25 57.7 L0 43.3 L0 14.4 Z" fill="none" stroke="#ffffff" stroke-width="1.5"/>
+          </pattern>
+        </defs>
+        <rect width="100%" height="100%" fill="url(#hexagons)"/>
+      </svg>
+    </div>
+
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+        
+        <!-- Hero Text -->
+        <div class="lg:col-span-7 space-y-6 text-center lg:text-left">
+          <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white/20 backdrop-blur-md text-amber-100 text-sm font-medium border border-white/30">
+            <i class="fa-solid fa-award text-honey-300"></i>
+            <span>100% Pure & Unadulterated</span>
+          </div>
+
+          <h1 class="text-4xl sm:text-5xl lg:text-6xl font-black tracking-tight leading-tight">
+            Pure Organic <span class="text-honey-300 underline decoration-honey-400 decoration-wavy decoration-2">Natural Honey</span> Delivered to Your Doorstep
+          </h1>
+
+          <p class="text-lg sm:text-xl text-amber-100 max-w-2xl mx-auto lg:mx-0 font-light">
+            Harvested directly from natural flower nectars. Rich in essential vitamins, minerals, and natural antioxidants for your family's health.
+          </p>
+
+          <!-- Action Buttons -->
+          <div class="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4 pt-4">
+            <button onclick="openOrderModal()" class="w-full sm:w-auto px-8 py-4 rounded-full bg-white text-warmorange font-extrabold text-lg shadow-2xl hover:bg-amber-50 hover:scale-105 active:scale-95 transition-all flex items-center justify-center gap-3">
+              <i class="fa-solid fa-cart-shopping text-warmorange"></i>
+              <span>PLACE ORDER NOW</span>
+            </button>
+
+            <a href="tel:8883382313" class="w-full sm:w-auto px-8 py-4 rounded-full bg-white/10 hover:bg-white/20 border-2 border-white/40 backdrop-blur-sm text-white font-bold text-lg transition-all flex items-center justify-center gap-3">
+              <i class="fa-solid fa-phone-volume"></i>
+              <span>Call: 8883382313</span>
+            </a>
+          </div>
+
+          <!-- Contact Person Badge -->
+          <div class="pt-4 flex items-center justify-center lg:justify-start gap-3 text-amber-200">
+            <i class="fa-solid fa-user-check text-honey-300 text-xl"></i>
+            <span class="text-sm font-semibold tracking-wide">Direct Contact: <strong class="text-white text-base">A. JOHN AVARANAM</strong></span>
+          </div>
+        </div>
+
+        <!-- Hero Graphic Illustration -->
+        <div class="lg:col-span-5 flex justify-center relative">
+          <!-- Outer glow decorative circle -->
+          <div class="absolute w-72 h-72 sm:w-96 sm:h-96 bg-honey-400/30 rounded-full blur-3xl -z-10"></div>
+          
+          <div class="relative max-w-md w-full bg-amber-950/20 backdrop-blur-lg border border-white/20 rounded-3xl p-6 shadow-2xl animate-float">
+            <!-- Simulated Honey Jar Graphic -->
+            <div class="relative bg-gradient-to-b from-amber-100 to-amber-200 rounded-2xl p-6 text-center border-4 border-amber-300/50 shadow-inner overflow-hidden">
+              <div class="w-24 h-6 bg-yellow-700 mx-auto rounded-t-lg border-b-2 border-yellow-800 shadow-md mb-2"></div>
+              <div class="relative my-4 py-8 bg-gradient-to-b from-amber-400 via-warmorange to-amber-700 rounded-2xl text-white shadow-xl flex flex-col items-center justify-center">
+                <!-- Label inside Jar -->
+                <div class="bg-white/90 backdrop-blur text-warmorange px-6 py-3 rounded-xl shadow-md border border-amber-300">
+                  <div class="text-xs font-black tracking-widest uppercase">JJ Natural</div>
+                  <div class="text-xl font-extrabold">HONEY</div>
+                  <div class="text-[10px] text-gray-600 font-semibold mt-1">100% PURE & NATURAL</div>
+                </div>
+              </div>
+              <div class="flex justify-between items-center text-amber-900 text-xs font-bold pt-2 border-t border-amber-300/60">
+                <span><i class="fa-solid fa-shield-halved text-warmorange"></i> Guaranteed Pure</span>
+                <span><i class="fa-solid fa-leaf text-green-600"></i> Eco Harvested</span>
+              </div>
+            </div>
+
+            <!-- Floating Badge -->
+            <div class="absolute -bottom-4 -right-4 bg-white text-gray-900 p-4 rounded-2xl shadow-xl flex items-center gap-3 border border-amber-200">
+              <div class="w-10 h-10 rounded-full bg-amber-100 text-warmorange flex items-center justify-center font-bold text-xl">
+                <i class="fa-solid fa-phone"></i>
+              </div>
+              <div>
+                <div class="text-xs text-gray-500 font-medium">Quick Order Call</div>
+                <div class="text-base font-extrabold text-warmorange">8883382313</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- KEY SELLING POINTS SECTION -->
+  <section class="py-16 lg:py-24 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="text-center max-w-3xl mx-auto mb-16">
+      <h2 class="text-xs font-extrabold tracking-widest text-warmorange uppercase mb-2">Why Choose Us</h2>
+      <p class="text-3xl sm:text-4xl font-extrabold text-gray-900">Goodness directly from Nature's Comb</p>
+      <div class="w-20 h-1.5 bg-warmorange mx-auto mt-4 rounded-full"></div>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+      
+      <!-- Point 1 -->
+      <div class="bg-white rounded-3xl p-8 border border-amber-100 shadow-xl shadow-amber-950/5 hover:-translate-y-2 transition-all duration-300 flex flex-col justify-between group">
+        <div>
+          <div class="w-16 h-16 rounded-2xl bg-amber-100 text-warmorange flex items-center justify-center text-3xl mb-6 group-hover:bg-warmorange group-hover:text-white transition-colors">
+            <i class="fa-solid fa-cloud-sun"></i>
+          </div>
+          <h3 class="text-2xl font-bold text-gray-900 mb-3">Nature's Gift</h3>
+          <p class="text-gray-600 leading-relaxed">
+            Pure honey, carefully collected by natural honey bees straight from wild flower nectar. Unfiltered, untreated, and 100% natural.
+          </p>
+        </div>
+        <div class="mt-6 pt-4 border-t border-amber-50 text-warmorange font-semibold text-sm flex items-center gap-2">
+          <span>Fresh & Authentic</span>
+          <i class="fa-solid fa-arrow-right text-xs"></i>
+        </div>
+      </div>
+
+      <!-- Point 2 -->
+      <div class="bg-white rounded-3xl p-8 border border-amber-100 shadow-xl shadow-amber-950/5 hover:-translate-y-2 transition-all duration-300 flex flex-col justify-between group">
+        <div>
+          <div class="w-16 h-16 rounded-2xl bg-amber-100 text-warmorange flex items-center justify-center text-3xl mb-6 group-hover:bg-warmorange group-hover:text-white transition-colors">
+            <i class="fa-solid fa-utensils"></i>
+          </div>
+          <h3 class="text-2xl font-bold text-gray-900 mb-3">Versatile & Delicious</h3>
+          <p class="text-gray-600 leading-relaxed">
+            Pure honey is rich in essential vitamins, minerals, and natural antioxidants. Perfect as a healthy sweetener for tea, breakfast, or desserts.
+          </p>
+        </div>
+        <div class="mt-6 pt-4 border-t border-amber-50 text-warmorange font-semibold text-sm flex items-center gap-2">
+          <span>Rich Taste & Aroma</span>
+          <i class="fa-solid fa-arrow-right text-xs"></i>
+        </div>
+      </div>
+
+      <!-- Point 3 -->
+      <div class="bg-white rounded-3xl p-8 border border-amber-100 shadow-xl shadow-amber-950/5 hover:-translate-y-2 transition-all duration-300 flex flex-col justify-between group">
+        <div>
+          <div class="w-16 h-16 rounded-2xl bg-amber-100 text-warmorange flex items-center justify-center text-3xl mb-6 group-hover:bg-warmorange group-hover:text-white transition-colors">
+            <i class="fa-solid fa-heart-pulse"></i>
+          </div>
+          <h3 class="text-2xl font-bold text-gray-900 mb-3">Packed with Nutrients</h3>
+          <p class="text-gray-600 leading-relaxed">
+            Packed with essential nutrients and immunity-boosting health benefits. Boosts energy levels and aids overall digestional health.
+          </p>
+        </div>
+        <div class="mt-6 pt-4 border-t border-amber-50 text-warmorange font-semibold text-sm flex items-center gap-2">
+          <span>100% Immunity Booster</span>
+          <i class="fa-solid fa-arrow-right text-xs"></i>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- QUICK ORDER CTA BANNER -->
+  <section class="bg-gradient-to-r from-amber-500 to-warmorange py-16 text-white relative overflow-hidden">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
+      <h2 class="text-3xl sm:text-5xl font-black mb-4">Want Pure Natural Honey Today?</h2>
+      <p class="text-amber-100 text-lg max-w-2xl mx-auto mb-8">
+        Directly order from proprietor <span class="font-bold text-white underline">A. JOHN AVARANAM</span> by calling or sending a message now!
+      </p>
+
+      <div class="flex flex-wrap justify-center gap-4">
+        <!-- Phone Order Button -->
+        <a href="tel:8883382313" class="px-8 py-4 rounded-full bg-white text-warmorange font-extrabold text-lg shadow-xl hover:bg-amber-50 hover:scale-105 active:scale-95 transition-all inline-flex items-center gap-3">
+          <i class="fa-solid fa-phone text-xl"></i>
+          <span>CALL 8883382313</span>
+        </a>
+
+        <!-- WhatsApp Order Button -->
+        <a href="https://wa.me/918883382313?text=Hi%20A.%20JOHN%20AVARANAM,%20I%20want%20to%20order%20JJ%20Natural%20Honey." target="_blank" class="px-8 py-4 rounded-full bg-emerald-600 text-white font-extrabold text-lg shadow-xl hover:bg-emerald-500 hover:scale-105 active:scale-95 transition-all inline-flex items-center gap-3">
+          <i class="fa-brands fa-whatsapp text-2xl"></i>
+          <span>WHATSAPP ORDER</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT & DETAILS SECTION -->
+  <section class="py-16 bg-white">
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="bg-amber-50 rounded-3xl p-8 sm:p-12 border border-amber-200 shadow-xl grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+        
+        <div class="space-y-6">
+          <div class="inline-block px-3 py-1 rounded-full bg-amber-200 text-warmorange text-xs font-bold uppercase tracking-wider">
+            Official Contact
+          </div>
+          <h2 class="text-3xl font-extrabold text-gray-900">Get in Touch Directly</h2>
+          <p class="text-gray-600">
+            Have questions about our honey or want to place bulk orders? Reach out to us directly through phone call or WhatsApp.
+          </p>
+
+          <div class="space-y-4">
+            <div class="flex items-center gap-4">
+              <div class="w-12 h-12 rounded-xl bg-warmorange text-white flex items-center justify-center text-xl shadow-md">
+                <i class="fa-solid fa-user"></i>
+              </div>
+              <div>
+                <div class="text-xs text-gray-500 font-semibold">Contact Person</div>
+                <div class="text-lg font-bold text-gray-900">A. JOHN AVARANAM</div>
+              </div>
+            </div>
+
+            <div class="flex items-center gap-4">
+              <div class="w-12 h-12 rounded-xl bg-warmorange text-white flex items-center justify-center text-xl shadow-md">
+                <i class="fa-solid fa-phone"></i>
+              </div>
+              <div>
+                <div class="text-xs text-gray-500 font-semibold">Mobile Number</div>
+                <a href="tel:8883382313" class="text-lg font-bold text-warmorange hover:underline">8883382313</a>
+              </div>
+            </div>
+
+            <div class="flex items-center gap-4">
+              <div class="w-12 h-12 rounded-xl bg-emerald-600 text-white flex items-center justify-center text-xl shadow-md">
+                <i class="fa-brands fa-whatsapp"></i>
+              </div>
+              <div>
+                <div class="text-xs text-gray-500 font-semibold">WhatsApp Chat</div>
+                <a href="https://wa.me/918883382313?text=Hi,%20I%20want%20to%20inquire%20about%20JJ%20Natural%20Honey" target="_blank" class="text-lg font-bold text-emerald-700 hover:underline">Chat on WhatsApp</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Action Card -->
+        <div class="bg-white rounded-2xl p-6 border border-amber-200 shadow-lg text-center space-y-4">
+          <div class="w-16 h-16 bg-amber-100 text-warmorange rounded-full flex items-center justify-center text-3xl mx-auto">
+            <i class="fa-solid fa-jar"></i>
+          </div>
+          <h3 class="text-xl font-bold text-gray-900">Ready to Enjoy Pure Taste?</h3>
+          <p class="text-sm text-gray-500">
+            Click below to open the quick order options and get instant confirmation directly on call or WhatsApp.
+          </p>
+          <button onclick="openOrderModal()" class="w-full py-3.5 px-6 rounded-xl bg-warmorange text-white font-bold hover:bg-deeporange transition-colors shadow-md">
+            Click to Place Order
+          </button>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="bg-gray-900 text-amber-100 py-8 border-t border-gray-800">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-center justify-between gap-4">
+      <div class="flex items-center gap-2">
+        <div class="w-8 h-8 rounded-lg bg-warmorange text-white font-bold flex items-center justify-center text-sm">JJ</div>
+        <span class="font-bold text-white tracking-wide">JJ NATURAL HONEY</span>
+      </div>
+      <p class="text-xs text-gray-400 text-center sm:text-right">
+        Contact: A. JOHN AVARANAM | Phone: <a href="tel:8883382313" class="text-amber-400 hover:underline">8883382313</a>
+      </p>
+    </div>
+  </footer>
+
+  <!-- ORDER MODAL -->
+  <div id="orderModal" class="fixed inset-0 z-50 hidden flex items-center justify-center p-4 bg-black/60 backdrop-blur-sm">
+    <div class="bg-white rounded-3xl max-w-md w-full p-6 sm:p-8 shadow-2xl relative border border-amber-200 animate-in fade-in zoom-in duration-200">
+      
+      <!-- Close Button -->
+      <button onclick="closeOrderModal()" class="absolute top-5 right-5 w-8 h-8 rounded-full bg-gray-100 text-gray-500 hover:bg-gray-200 flex items-center justify-center transition-colors">
+        <i class="fa-solid fa-xmark"></i>
+      </button>
+
+      <div class="text-center mb-6">
+        <div class="w-12 h-12 rounded-2xl bg-amber-100 text-warmorange flex items-center justify-center text-2xl mx-auto mb-2">
+          <i class="fa-solid fa-basket-shopping"></i>
+        </div>
+        <h3 class="text-2xl font-extrabold text-gray-900">Order JJ Natural Honey</h3>
+        <p class="text-xs text-gray-500 mt-1">Select quantity & choose how you'd like to connect directly!</p>
+      </div>
+
+      <div class="space-y-4">
+        
+        <!-- Quantity Selector -->
+        <div>
+          <label class="block text-xs font-bold uppercase tracking-wider text-gray-700 mb-2">Select Quantity</label>
+          <div class="grid grid-cols-2 sm:grid-cols-4 gap-2">
+            <button type="button" onclick="selectQuantity('250g')" class="qty-btn border-2 border-warmorange bg-amber-50 text-warmorange font-bold py-2 px-2 rounded-xl text-center text-sm hover:bg-amber-100 transition-colors">
+              250 Grams
+            </button>
+            <button type="button" onclick="selectQuantity('500g')" class="qty-btn border-2 border-gray-200 bg-white text-gray-700 font-bold py-2 px-2 rounded-xl text-center text-sm hover:border-warmorange transition-colors">
+              500 Grams
+            </button>
+            <button type="button" onclick="selectQuantity('1kg')" class="qty-btn border-2 border-gray-200 bg-white text-gray-700 font-bold py-2 px-2 rounded-xl text-center text-sm hover:border-warmorange transition-colors">
+              1 Kg
+            </button>
+            <button type="button" onclick="selectQuantity('Bulk')" class="qty-btn border-2 border-gray-200 bg-white text-gray-700 font-bold py-2 px-2 rounded-xl text-center text-sm hover:border-warmorange transition-colors">
+              Bulk
+            </button>
+          </div>
+        </div>
+
+        <!-- Optional Name Input -->
+        <div>
+          <label class="block text-xs font-bold uppercase tracking-wider text-gray-700 mb-1">Your Name (Optional)</label>
+          <input type="text" id="custName" placeholder="Enter your name" class="w-full px-4 py-2.5 rounded-xl border border-gray-300 focus:ring-2 focus:ring-warmorange focus:border-warmorange outline-none text-sm">
+        </div>
+
+        <!-- Direct Contact Info Banner -->
+        <div class="p-3 bg-amber-50 rounded-xl border border-amber-200 text-xs text-amber-900 flex items-center gap-3">
+          <i class="fa-solid fa-user-circle text-2xl text-warmorange"></i>
+          <div>
+            <div class="font-bold">Contact Person: A. JOHN AVARANAM</div>
+            <div>Phone: 8883382313</div>
+          </div>
+        </div>
+
+        <!-- Action Buttons -->
+        <div class="space-y-3 pt-2">
+          
+          <!-- Direct WhatsApp Order Button -->
+          <button onclick="sendWhatsAppOrder()" class="w-full py-3.5 px-4 rounded-xl bg-emerald-600 hover:bg-emerald-700 text-white font-bold flex items-center justify-center gap-3 shadow-lg shadow-emerald-600/20 transition-all">
+            <i class="fa-brands fa-whatsapp text-xl"></i>
+            <span>Order via WhatsApp</span>
+          </button>
+
+          <!-- Direct Phone Call Order Button -->
+          <button onclick="makeDirectCall()" class="w-full py-3.5 px-4 rounded-xl bg-warmorange hover:bg-deeporange text-white font-bold flex items-center justify-center gap-3 shadow-lg shadow-warmorange/20 transition-all">
+            <i class="fa-solid fa-phone text-lg"></i>
+            <span>Call to Order (8883382313)</span>
+          </button>
+
+        </div>
+
+      </div>
+
+    </div>
+  </div>
+
+  <!-- JAVASCRIPT LOGIC -->
+  <script>
+    let selectedQty = '250g';
+
+    function openOrderModal() {
+      document.getElementById('orderModal').classList.remove('hidden');
+    }
+
+    function closeOrderModal() {
+      document.getElementById('orderModal').classList.add('hidden');
+    }
+
+    function selectQuantity(qty) {
+      selectedQty = qty;
+      const btns = document.querySelectorAll('.qty-btn');
+      btns.forEach(btn => {
+        if (btn.innerText.toLowerCase().includes(qty.toLowerCase())) {
+          btn.className = 'qty-btn border-2 border-warmorange bg-amber-50 text-warmorange font-bold py-2 px-2 rounded-xl text-center text-sm transition-colors';
+        } else {
+          btn.className = 'qty-btn border-2 border-gray-200 bg-white text-gray-700 font-bold py-2 px-2 rounded-xl text-center text-sm hover:border-warmorange transition-colors';
+        }
+      });
+    }
+
+    function sendWhatsAppOrder() {
+      const name = document.getElementById('custName').value.trim();
+      let text = `Hi A. JOHN AVARANAM, I would like to order JJ Natural Honey. Quantity: ${selectedQty}.`;
+      if (name) {
+        text += ` My name is ${name}.`;
+      }
+      const whatsappUrl = `https://wa.me/918883382313?text=${encodeURIComponent(text)}`;
+      window.open(whatsappUrl, '_blank');
+      closeOrderModal();
+    }
+
+    function makeDirectCall() {
+      window.location.href = 'tel:8883382313';
+      closeOrderModal();
+    }
+
+    // Close modal on click outside content
+    window.onclick = function(event) {
+      const modal = document.getElementById('orderModal');
+      if (event.target === modal) {
+        closeOrderModal();
+      }
+    };
+  </script>
+</body>
+</html>
